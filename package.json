@@ -1,0 +1,22 @@
+{
+  "name": "roblox-safeguard-ai",
+  "version": "1.0.0",
+  "description": "🛡️ AI-Powered Moderation for Roblox - Made with ❤️ by @Higanste",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Edge functions build automatically'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vercel": "^33.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "@Higanste",
+  "license": "MIT"
+}
