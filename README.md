@@ -1,94 +1,84 @@
-# 🛡️ Roblox SafeGuard AI
+# 🛡️ Roblox SafeGuard AI - The Bypass Hunter
 
 > **The most aggressive, context-aware AI moderation system for Roblox.**
 > 
-> Created by **@Higanste** | [X (Twitter)](https://x.com/higanste) | [YouTube](https://www.youtube.com/@higanste)
-
-![SafeGuard AI Banner](https://img.shields.io/badge/SafeGuard-AI%20Powered-blue?style=for-the-badge&logo=roblox)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Vercel](https://img.shields.io/badge/Backend-Vercel%20Edge-black?style=for-the-badge&logo=vercel)
+> Created with ❤️ by **@Higanste**
+> [🐦 Twitter/X](https://x.com/higanste) | [📺 YouTube](https://www.youtube.com/@higanste)
 
 ---
 
-## ⚡ Features
+## ⚡ Why SafeGuard AI?
 
-- 🤖 **AI-Powered Moderation**: uses Groq's Llama 3.1 to understand intent.
-- 🔍 **Bypass Detection**: catches leetspeak, symbols, off-platform attempts.
-- 🚨 **Grooming Detection**: immediate permanent ban on predatory behavior.
-- ⏱️ **3-Second Cooldown**: rate limiting shown directly in chat placeholder.
-- 📊 **Strike System**: Warning → 24hr mute → Permanent ban.
-- 📢 **Discord Bot Logging**: Branded moderation alerts sent to your server.
-- ♾️ **Infinite API Scaling**: Add 50+ Groq keys for massive games.
+Traditional filters are easily bypassed. **SafeGuard AI** uses Groq's Llama 3.1 to understand the **context** and **intent** behind a message. It doesn't just look for words; it looks for **behavior**.
 
----
-
-## 📖 Step-By-Step Setup Tutorial
-
-### 1. Backend Setup (Vercel)
-1. **Clone the repo**: `git clone https://github.com/YOUR-USERNAME/roblox-safeguard-ai.git`
-2. **Setup Groq**:
-   - Go to [console.groq.com](https://console.groq.com)
-   - Create an account and generate an API key.
-   - Copy the key (`gsk_...`).
-3. **Setup Discord Bot**:
-   - Go to [Discord Developer Portal](https://discord.com/developers/applications).
-   - "New Application" → Name it "SafeGuard AI".
-   - "Bot" → "Reset Token" → **Copy this token**.
-   - Scroll down to "Privileged Gateway Intents" and enable **Message Content Intent**.
-   - "OAuth2" → "URL Generator" → Select `bot` + `Send Messages` → Copy URL and invite bot to your server.
-   - Right-click your log channel in Discord → **Copy Channel ID**.
-4. **Deploy to Vercel**:
-   - Install Vercel CLI: `npm i -g vercel`
-   - Run `vercel` in the project folder.
-   - Set these Environment Variables in the Vercel Dashboard:
-     - `GROQ_KEY_1`: Your Groq API key.
-     - `DISCORD_BOT_TOKEN`: Your Discord Bot token.
-     - `DISCORD_CHANNEL_ID`: Your Discord channel ID.
-   - Copy your **Deployment URL** (e.g. `https://safe-guard.vercel.app`).
-
-### 2. Roblox Studio Setup
-1. **Enable HttpService**: Game Settings → Security → **Allow HTTP Requests**.
-2. **Add Scripts**:
-   - Copy `roblox/SafeGuardAI.luau` to a **ModuleScript** in `ServerScriptService` named `SafeGuardAI`.
-   - Copy `roblox/SafeGuardConfig.luau` to a **ModuleScript** in `ServerScriptService` named `SafeGuardConfig`.
-   - Copy `roblox/SafeGuardServer.server.luau` to a **Script** in `ServerScriptService`.
-   - Copy `roblox/SafeGuardClient.client.luau` to a **LocalScript** in `StarterPlayerScripts`.
-3. **Configure**: Open `SafeGuardConfig` and paste your Vercel URL in `Config.API_URL`.
+- 🤖 **Behavioral Analysis**: Catches grooming attempts and predatory behavior.
+- 🔍 **Bypass Hunter**: Detects `d.i.z.z.y`, `snp`, `insta`, and 1000+ leetspeak variations.
+- ⏱️ **Zero Latency**: Built on Vercel Edge for maximum speed.
+- 📊 **Scale Ready**: Auto-rotates between 50+ Groq keys for massive games.
 
 ---
 
-## 🤖 VS Code AI Prompt (Auto-Setup)
+## 📖 Quick Start & Deployment Guide
 
-Copy and paste this prompt into your VS Code AI (Copilot/Cursor/Antigravity) to help you set up this project instantly:
+### 1. The 1-Click Deployment
+1. **Fork this Repository**: Click the 'Fork' button at the top of this page to copy it to your GitHub account.
+2. **Connect to Vercel**:
+   - Log in to [Vercel](https://vercel.com).
+   - Click **"Add New Project"**.
+   - Select your **Roblox-SafeGuard** repository.
+   - **IMPORTANT**: Paste your Environment Variables during the setup (see below).
 
-```text
-Help me set up the Roblox SafeGuard AI project by @Higanste. 
-1. Check the .env.example file and help me create a .env file.
-2. Tell me where I need to paste my Groq API Key and Discord Bot Token.
-3. Explain how to deploy this to Vercel using the terminal.
-4. Once deployed, show me exactly which files I need to copy into Roblox Studio and where they go.
-5. Remind me to update SafeGuardConfig.luau with my final Vercel URL.
-Make it easy for a beginner to follow!
-```
+### 2. Required API Keys
+You will need to add these as "Environment Variables" in Vercel:
+
+| Key Name | Where to get it |
+|----------|-----------------|
+| `GROQ_KEY_1` | [console.groq.com](https://console.groq.com) |
+| `DISCORD_BOT_TOKEN` | [Discord Developer Portal](https://discord.com/developers/applications) |
+| `DISCORD_CHANNEL_ID` | Right-click your log channel in Discord |
+
+### 3. Roblox Studio Integration
+1. Enable **HTTP Requests** in Game Settings → Security.
+2. Copy these files into your game:
+   - `roblox/SafeGuardAI.luau` → ModuleScript in **ServerScriptService**.
+   - `roblox/SafeGuardConfig.luau` → ModuleScript in **ServerScriptService**.
+   - `roblox/SafeGuardServer.server.luau` → Script in **ServerScriptService**.
+   - `roblox/SafeGuardClient.client.luau` → LocalScript in **StarterPlayerScripts**.
+3. **Set your URL**: Open `SafeGuardConfig` and paste your final Vercel URL.
 
 ---
 
-## 📺 Tutorial Video
-**Coming Soon!** Subscribe to [Higanste on YouTube](https://www.youtube.com/@higanste) for the full video guide.
+## 🤖 MASTER AI SETUP PROMPT (100% Automated)
+
+Want the AI to do all the work? Copy and paste this prompt into your AI assistant (Cursor, Antigravity, or Copilot):
+
+> "Help me set up **Roblox SafeGuard AI** by **@Higanste**. 
+> 1. Clone the repo from `https://github.com/higanste/Roblox-SafeGuard_by_Higanste`.
+> 2. Ask me interactively for my Discord Bot Token, Channel ID, and Groq API keys (ask if I have more keys!).
+> 3. Create my `.env` file automatically.
+> 4. Help me deploy to Vercel and then update `SafeGuardConfig.luau` with the final URL.
+> 5. Tell me exactly where to paste each script in Roblox Studio. 
+> Let's go!"
 
 ---
 
-## 🐞 Bugs & Support
-Found an issue? Need help? 
-- 🐦 **Twitter/X**: [@Higanste](https://x.com/higanste)
-- 📺 **YouTube**: [@Higanste](https://www.youtube.com/@higanste)
+
+## 📺 Tutorial & Support
+**Full Tutorial Video Coming Soon on YouTube!** 
+Subscribe to [@Higanste on YouTube](https://www.youtube.com/@higanste) so you don't miss it.
+
+Found a bug? 
+Reach out on **Twitter/X**: [@Higanste](https://x.com/higanste)
 
 ---
 
 ## 🤝 Contributing
-Feel free to fork and submit PRs to improve the bypass detection!
+Found a new bypass? Submit a Pull Request! help us keep the Roblox community safe for everyone.
 
 ---
 
 ## 📄 License
-MIT License - Developed with ❤️ by **@Higanste**
+MIT License - Created by **@Higanste**
+"SafeGuard AI - The Bypass Hunter" is open-source and free to use.
+
+🛡️ *"Protecting the future of play."*
