@@ -77,6 +77,20 @@ Found a new bypass? Submit a Pull Request! help us keep the Roblox community saf
 
 ---
 
+## 💖 Support @Higanste
+
+Maintaining **SafeGuard AI** and keeping the AI backend running for the community requires resources. If this project helped you or your game, consider supporting the developer!
+
+### 🎁 How to Support
+- **Star this repo**: It helps more people find the project!
+- **Donate**: Help keep the project free and open-source.
+
+[![](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal)](https://www.paypal.com/ncp/payment/9QKNFHZU9338E)
+
+> *"Make a donation to help keep the project free."*
+
+---
+
 ## 📄 License
 MIT License - Created by **@Higanste**
 "SafeGuard AI - The Bypass Hunter" is open-source and free to use.
