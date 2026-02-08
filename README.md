@@ -77,15 +77,17 @@ Found a new bypass? Submit a Pull Request! help us keep the Roblox community saf
 
 ---
 
-## 💖 Support @Higanste
+## 💖 Support the Project
 
-Maintaining **SafeGuard AI** and keeping the AI backend running for the community requires resources. If this project helped you or your game, consider supporting the developer!
+**SafeGuard AI** is a passion project by **@Higanste** and **VizoraAI**. To keep the AI moderation backend free and open-source for everyone, we rely on your support!
 
-### 🎁 How to Support
-- **Star this repo**: It helps more people find the project!
-- **Donate**: Help keep the project free and open-source.
+### 🎁 Help us grow:
+- **Star this repo**: Show your love and help us reach more developers.
+- **Donate**: Every bit helps with Groq API costs and server maintenance.
 
-[![](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal)](https://www.paypal.com/ncp/payment/9QKNFHZU9338E)
+| **Donate with PayPal** | **Scan to Donate** |
+|:---:|:---:|
+| [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge&logo=paypal)](https://www.paypal.com/ncp/payment/9QKNFHZU9338E) | ![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.paypal.com/ncp/payment/9QKNFHZU9338E) |
 
 > *"Make a donation to help keep the project free."*
 
